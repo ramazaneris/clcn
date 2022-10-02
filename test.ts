@@ -1,5 +1,5 @@
 import coloredConsole from "./dist/index";
 
-let clcl = new coloredConsole();
+let clcn = new coloredConsole();
 
-clcl.log("txt:cyan", "cyan");
+clcn.log("txt:cyan", "cyan");

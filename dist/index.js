@@ -30,6 +30,7 @@ module.exports = class coloredConsole {
     /**
      * @param {string} log Can log to console something with settings
      * @param {string} color Can chose the text color or backgroundcolor
+     * @param {string} text Can write console message
      **/
     log = function (color, text) {
         if (!color) {

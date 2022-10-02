@@ -1,5 +1,5 @@
 {
-  "name": "coloredconsole",
+  "name": "clcn",
   "version": "1.0.0",
   "description": "",
   "main": "./dist/index",
@@ -9,7 +9,7 @@
   },
   "keywords": [
     "colored console",
-    "clcl",
+    "clcn",
     "console color"
   ],
   "author": "",

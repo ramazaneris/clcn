@@ -1,5 +1,5 @@
 var coloredConsole = require("./dist/index");
 
-var clcl = new coloredConsole();
+var clcn = new coloredConsole();
 
-clcl.log("txt:cyan","cyan");
+clcn.log("txt:cyan", "cyan");
