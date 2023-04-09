@@ -1,5 +1,3 @@
-import coloredConsole from "./dist/index";
+import clcn from "./dist/index";
 
-let clcn = new coloredConsole();
-
-clcn.log("txt:cyan", "cyan");
+console.log(clcn.rainbowText("rainbow colors are powerful"))
