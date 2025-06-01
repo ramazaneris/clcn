@@ -1,4 +1,4 @@
-export * from "./Clcn.js";
+export { Clcn } from "./Clcn.js";
 export * from "./styles/colors.js";
 export * from "./styles/backgrounds.js";
 export * from "./styles/rainbow.js";

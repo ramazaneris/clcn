@@ -1,11 +1,17 @@
 {
     "name": "clcn",
-    "version": "3.0.02",
+    "version": "3.0.03",
     "description": "A lightweight CLI coloring utility with support for ANSI, HEX, gradients, rainbow, and dual ESM/CJS support.",
     "main": "./lib/cjs/index.js",
     "exports": {
-        "import": "./lib/mjs/index.mjs",
-        "require": "./lib/cjs/index.js"
+        "import": {
+            "types": "./lib/mjs/index.d.ts",
+            "default": "./lib/mjs/index.mjs"
+        },
+        "require": {
+            "types": "./lib/cjs/index.d.ts",
+            "default": "./lib/cjs/index.js"
+        }
     },
     "type": "module",
     "files": [
