@@ -75,7 +75,7 @@ console.log(gradientText("Gradient!", "#ff0000", "#00ccff"));
 ## 📸 Terminal Demo Output
 
 <p align="center">
-  <img src="./demo/demo.png" alt="clcn color demo in terminal" width="500" />
+  <img src="./demo.png" alt="clcn color demo in terminal" width="500" />
 </p>
 
 This demo includes:
