@@ -1,81 +1,122 @@
-# Clcn - colored console
+# 🎨 clcn — Terminal Coloring Utility for Node.js
 
-## Description
+`clcn` is a lightweight and terminal-safe coloring utility for Node.js.  
+It supports ANSI, HEX/truecolor, gradients, rainbow effects, and works with both CommonJS and ESM.
 
-Paint your console
+---
 
-- [First example](#example)
-- [Functions](#functions)
-  - [Colors](#colors)
-  - [Rainbow colors](#rainbow-colors)
+## ⚠️ Module Format
 
-### Example
+> ✅ This package supports **both ESM and CommonJS**:
+>
+> -   Use `import { txtRed } from 'clcn'` in ESM projects (`"type": "module"` or `.mjs`)
+> -   Use `const { txtRed } = require('clcn')` in CommonJS projects
 
-CommonJS
+---
 
-```js
-const clcn = require("clcn");
+## 🚀 Installation
 
-console.log(clcn.txtRed("Uwu, this text is red"));
+```bash
+npm install clcn
 ```
 
-ES Module
+or
 
-```js
-import clcn from "clcn";
-
-console.log(clcn.textRed("Uwu, this text is red"));
+```bash
+yarn add clcn
 ```
 
-### Functions
+---
 
-#### Colors
+## 🔧 Basic Usage
 
-- Black
-  - Text color
-    `txtBlack(string)`
-  - Background color
-    `bgBlack(string)`
-- Red
-  - Text color
-    `txtRed(string)`
-  - Background color
-    `bgRed(string)`
-- Green
-  - Text color
-    `txtGreen(string)`
-  - Background color
-    `bgGreen(string)`
-- Yellow
-  - Text color
-    `txtYellow(string)`
-  - Background color
-    `bgYellow(string)`
-- Blue
-  - Text color
-    `txtBlue(string)`
-  - Background color
-    `bgBlue(string)`
-- Magenta
-  - Text color
-    `txtMagenta(string)`
-  - Background color
-    `bgMagenta(string)`
-- Cyan
-  - Text color
-    `txtCyan(string)`
-  - Background color
-    `bgCyan(string)`
-- White
-  - Text color
-    `txtWhite(string)`
-  - Background color
-    `bgWhite(string)`
+```js
+// ESM
+import { txtRed, gradientText } from "clcn";
 
-### Rainbow Colors
+// CommonJS
+// const { txtRed, gradientText } = require("clcn");
 
-- Rainbow
-  - Text color
-    `rainbowText(string)`
-  - Background color
-    `rainbowBackground(string)`
+console.log(txtRed("Red text"));
+console.log(gradientText("Gradient!", "#ff0000", "#00ccff"));
+```
+
+---
+
+## 🎨 Color Functions
+
+### ✅ Foreground text
+
+-   `txtRed(text)`
+-   `txtGreen(text)`
+-   `txtYellow(text)`
+-   `txtBrightRed(text)` _(and other bright variants)_
+
+### ✅ Background colors
+
+-   `bgRed(text)`
+-   `bgGreen(text)`
+-   `bgBlue(text)`
+-   `bgBrightYellow(text)`
+
+---
+
+## 🌈 Special Effects
+
+-   `hexText(text, "#RRGGBB")`
+-   `hexBg(text, "#RRGGBB")`
+-   `gradientText(text, fromHex, toHex)`
+-   `gradientBackground(text, fromHex, toHex)`
+-   `rainbowText(text)`
+-   `rainbowBackground(text)`
+
+---
+
+## 📸 Terminal Demo Output
+
+<p align="center">
+  <img src="./demo/demo.png" alt="clcn color demo in terminal" width="500" />
+</p>
+
+This demo includes:
+
+-   Clcn class messages (info, success, warning, error)
+-   Foreground and background ANSI colors
+-   HEX truecolor
+-   Rainbow and gradient effects
+
+---
+
+## 🛡️ Terminal Compatibility
+
+`clcn` automatically detects color support:
+
+| Variable              | Effect                |
+| --------------------- | --------------------- |
+| `TERM=xterm-256color` | Enables full colors   |
+| `NO_COLOR=1`          | Disables all coloring |
+| `FORCE_COLOR=1`       | Forces color output   |
+
+---
+
+## ✅ Node Compatibility
+
+| Terminal             | 24-bit RGB | Rainbow | Gradient | HEX |
+| -------------------- | ---------- | ------- | -------- | --- |
+| VS Code Terminal     | ✅         | ✅      | ✅       | ✅  |
+| iTerm2 (macOS)       | ✅         | ✅      | ✅       | ✅  |
+| WSL / Git Bash       | ✅         | ✅      | ✅       | ✅  |
+| Windows cmd (legacy) | ❌         | ⚠️      | ❌       | ❌  |
+
+---
+
+## 📜 License
+
+MIT © 2025  
+Developed by [Ramco](https://ramco.dev)
+
+---
+
+## 🤝 Contributing
+
+Feel free to [open an issue](https://github.com/ramazaneris/clcn/issues) or submit a pull request.

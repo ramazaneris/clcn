@@ -1,24 +1,46 @@
 {
-  "name": "clcn",
-  "version": "2.0.1",
-  "description": "Paint your console",
-  "main": "./dist/index.js",
-  "types": "./dist/index.d.ts",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/ramazaneris/clcn.git"
-  },
-  "keywords": [
-    "colored console",
-    "clcn",
-    "console color"
-  ],
-  "author": "",
-  "license": "MIT",
-  "devDependencies": {
-    "@types/node": "^18.7.23"
-  }
+    "name": "clcn",
+    "version": "4.0.0",
+    "description": "A lightweight CLI coloring utility with support for ANSI, HEX, gradients, rainbow, and dual ESM/CJS support.",
+    "main": "./lib/cjs/index.js",
+    "exports": {
+        "import": "./lib/mjs/index.mjs",
+        "require": "./lib/cjs/index.js"
+    },
+    "type": "module",
+    "files": [
+        "lib"
+    ],
+    "scripts": {
+        "build": "node build.js"
+    },
+    "keywords": [
+        "cli",
+        "colors",
+        "terminal",
+        "ansi",
+        "gradient",
+        "rainbow",
+        "truecolor",
+        "chalk",
+        "esm",
+        "commonjs"
+    ],
+    "author": "Ramazan Eriş",
+    "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/ramazaneris/clcn"
+    },
+    "bugs": {
+        "url": "https://github.com/ramazaneris/clcn/issues"
+    },
+    "homepage": "https://github.com/ramazaneris/clcn#readme",
+    "devDependencies": {
+        "esbuild": "^0.21.0",
+        "fast-glob": "^3.3.1"
+    },
+    "engines": {
+        "node": ">=14"
+    }
 }
